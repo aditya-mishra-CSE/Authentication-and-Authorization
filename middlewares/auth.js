@@ -29,6 +29,8 @@ exports.auth = (req, res, next) => {
 
             req.user = payload; //jo role hai woh is object ke andar pda hai 
             //isse hi pata pdega ki student hai ya Admin
+            //matlab yahan par The req.user object is attached 
+            //to the HTTP request only after the JWT token has been successfully verified.
             //req.key ke andar maine poyload ko store kr liya hai
         }catch(err){
             return res.status(401).json({
